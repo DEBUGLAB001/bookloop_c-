@@ -26,61 +26,6 @@ BookLoop is a neighbourhood library and community book exchange web application 
 - **Testing Framework**: Native C++ test harness (`tests/test_suite.cpp`) executed via standard build targets and reporting structured JSON results.
 - **Build System**: CMake 3.20+ with support for Ninja or Make generators, and native socket libraries (`ws2_32` on Windows, POSIX sockets on Linux/macOS).
 
-### Build, Run, and Validation Commands
-
-#### Building the Application
-
-Using CMake and Ninja / Make:
-
-```bash
-# Configure the build directory
-cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
-
-# Build all targets (server and challenge_tests)
-cmake --build build -j2
-```
-
-On Windows environments using Ninja and Clang++ or MinGW:
-
-```powershell
-cmake -G Ninja -DCMAKE_CXX_COMPILER=clang++ -B build -S . -DCMAKE_BUILD_TYPE=Release
-cmake --build build
-```
-
-#### Starting the Application
-
-```bash
-# Run the compiled server executable
-./build/server
-
-# On Windows:
-.\build\server.exe
-```
-
-By default, the server binds to `0.0.0.0:8081`. You can configure a different port by setting the `PORT` environment variable:
-
-```bash
-PORT=9090 ./build/server
-```
-
-Once running, navigate to `http://127.0.0.1:8081` in your browser.
-
-#### Running Tests
-
-```bash
-# Build the test target
-cmake --build build --target challenge_tests
-
-# Execute the test binary
-./build/challenge_tests
-
-# On Windows:
-.\build\challenge_tests.exe
-```
-
-A shell script wrapper is also provided in `tests/run_tests.sh`.
-
----
 
 ## 2. Debugging Challenge
 
@@ -160,30 +105,3 @@ The challenge objective is to trace request execution through the HTTP handlers 
 5. **Bounded Inventory Returns**: Calling `POST /api/return` rejects unlent returns, ensuring that available copies never exceed total catalog ownership (`available <= copies`).
 6. **Thread-Safe Catalog Access**: High-concurrency read and write operations execute without data races, torn reads, or inventory drift.
 
-### Automated Test Suite Execution
-
-The project includes an automated test target configured in CMake (`challenge_tests`).
-
-Command to execute tests:
-```bash
-./build/challenge_tests
-# On Windows:
-.\build\challenge_tests.exe
-```
-
-**Current Verification Status**:
-Executing `.\build\challenge_tests.exe` against the unmodified repository produces the following results:
-```json
-{"test":"fuzzy_title_search","passed":false}
-{"test":"reading_stack_within_budget","passed":true}
-{"test":"exchange_matching_finds_compatible_readers","passed":true}
-{"summary":{"passed":2,"failed":1}}
-```
-- `fuzzy_title_search`: **FAILED** (0 results returned due to Issue 1)
-- `reading_stack_within_budget`: **PASSED** (verifies page budget constraint, but does not assert 0/1 knapsack rating optimality)
-- `exchange_matching_finds_compatible_readers`: **PASSED** (verifies non-empty match generation, but does not assert residual path rerouting optimality)
-- Overall suite: **1 failed, 2 passed** (exit code 1).
-
-After resolving the reported issues, all test suites will pass cleanly with zero failures.
-#   b o o k l o o p _ c -  
- 
