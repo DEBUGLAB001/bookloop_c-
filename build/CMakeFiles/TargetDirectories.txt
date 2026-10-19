@@ -1,0 +1,5 @@
+C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir
+C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/server.dir
+C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/challenge_tests.dir
+C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/edit_cache.dir
+C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/rebuild_cache.dir

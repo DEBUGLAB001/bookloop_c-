@@ -1,0 +1,12 @@
+# ninja log v7
+41	366	8140516888296678	C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/cmake.verify_globs	7efb7c2ee462e91d
+546	24553	8140516893350555	CMakeFiles/core_services.dir/src/service/reading_stack.cpp.obj	c7fa21a4849f7b11
+465	27117	8140516892543678	CMakeFiles/core_services.dir/src/service/exchange_matcher.cpp.obj	5e1a25bd58c6a113
+582	27123	8140516893724062	CMakeFiles/challenge_tests.dir/tests/test_suite.cpp.obj	90995712c174faf1
+489	27138	8140516892774643	CMakeFiles/core_services.dir/src/service/library_ledger.cpp.obj	f3105992c8061a40
+372	28669	8140516891596699	CMakeFiles/core_services.dir/src/service/catalog_search.cpp.obj	9e895b8378bcf3aa
+28670	32371	8140517174600287	libcore_services.a	3a95af998c92d989
+32372	38905	8140517211598871	challenge_tests.exe	2eef9a9c49a4583c
+117	874	8140517743966577	C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/cmake.verify_globs	7efb7c2ee462e91d
+924	56046	8140517752044937	CMakeFiles/server.dir/src/main.cpp.obj	ab02c645491127d3
+56057	63046	8140518303349642	server.exe	673271d9c8d77be8

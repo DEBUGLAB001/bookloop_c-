@@ -1,0 +1,11 @@
+{
+  "name": "BookLoop",
+  "description": "A neighbourhood library and book exchange for discovering, borrowing, and passing along books.",
+  "language": "C++17",
+  "frontend": "HTML, CSS, and vanilla JavaScript",
+  "server": "cpp-httplib",
+  "default_port": 8081,
+  "bugs": 6,
+  "dsa_bugs": 3,
+  "god_level_dsa_bugs": 2
+}
