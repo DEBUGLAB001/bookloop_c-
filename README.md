@@ -57,12 +57,5 @@ BookLoop contains six defects that cause errors during search, book swaps, readi
 5. Returning a book only succeeds if a copy is currently checked out, preventing available inventory from exceeding total library ownership.
 6. Simultaneous requests from multiple readers execute smoothly without displaying corrupted or mismatched catalog numbers.
 
-The automated test suite can be run using:
-```bash
-cmake --build build --target challenge_tests
-./build/challenge_tests
-# On Windows:
-.\build\challenge_tests.exe
-```
 
 After fixing the defects, all catalog operations, inventory transitions, and recommendation services will operate consistently and accurately across all reader interactions.
