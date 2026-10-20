@@ -2,7 +2,7 @@
 
 ## Description
 
-BookLoop is a neighbourhood library and book exchange service written in C++17 that enables community members to discover books, borrow and return physical copies, coordinate peer-to-peer book swaps, and build personalized weekend reading stacks. The application entry point is `src/main.cpp`, which initializes a multithreaded HTTP server using `cpp-httplib` on port 8081, serializes JSON payloads with `nlohmann/json`, and serves static frontend assets from `public/`. Application domain models (`Book`, `BookHit`, `SwapOffer`, `SwapMatch`) are defined in `include/model/domain.hpp`. Core business logic resides in modular services under `src/service/` (with declarations in `include/service/`), providing trie-based Levenshtein search (`catalog_search.cpp`), min-cost max-flow peer exchange matching (`exchange_matcher.cpp`), 0/1 knapsack reading stack curation (`reading_stack.cpp`), and thread-synchronized inventory tracking (`library_ledger.cpp`). All catalog records, swap offers, and reader requests are stored in-memory in `src/main.cpp` using `std::vector<Book>` and dedicated ledger instances.
+BookLoop is a neighbourhood library and book exchange service written in C++17 that enables community members to discover books, borrow and return physical copies, coordinate peer-to-peer book swaps, and build personalized weekend reading stacks. The application entry point is `src/main.cpp`, which initializes a multithreaded HTTP server using `cpp-httplib` on port 8081, serializes JSON payloads with `nlohmann/json`, and serves static frontend assets from `public/`. Application domain models (`Book`, `BookHit`, `SwapOffer`, `SwapMatch`) are defined in `include/model/domain.hpp`. Core business logic resides in modular services under `src/service/` (with declarations in `include/service/`), providing trie-based Levenshtein search (`catalog_search.cpp`), min-cost max-flow peer exchange matching (`exchange_matcher.cpp`), 0/1 knapsack reading stack curation (`reading_stack.cpp`), synchronized inventory tracking (`library_ledger.cpp`), book return processing (`return_service.cpp`), and in-memory catalog storage (`catalog_store.cpp`).
 
 ## Repository Structure
 
@@ -18,16 +18,20 @@ BookLoop is a neighbourhood library and book exchange service written in C++17 t
 │   │   └── domain.hpp          # Domain data models (Book, BookHit, SwapOffer, SwapMatch)
 │   └── service/
 │       ├── catalog_search.hpp  # Fuzzy catalog search service interface
+│       ├── catalog_store.hpp   # In-memory catalog repository store interface
 │       ├── exchange_matcher.hpp # Bipartite exchange matching interface
 │       ├── library_ledger.hpp  # Thread-safe copy ledger interface
-│       └── reading_stack.hpp   # Reading stack knapsack selection interface
+│       ├── reading_stack.hpp   # Reading stack knapsack selection interface
+│       └── return_service.hpp  # Book return processing interface
 ├── src/
-│   ├── main.cpp                # Application entry point, HTTP routing, and in-memory state
+│   ├── main.cpp                # Application entry point, HTTP routing, and request dispatch
 │   └── service/
 │       ├── catalog_search.cpp  # Trie-based fuzzy search implementation
+│       ├── catalog_store.cpp   # Catalog inventory store implementation
 │       ├── exchange_matcher.cpp # Min-cost max-flow exchange matcher implementation
 │       ├── library_ledger.cpp  # Synchronized inventory ledger implementation
-│       └── reading_stack.cpp   # Reading stack selection implementation
+│       ├── reading_stack.cpp   # Reading stack selection implementation
+│       └── return_service.cpp  # Book return processing implementation
 └── public/
     ├── index.html              # Single-page web application interface
     ├── css/
@@ -61,21 +65,21 @@ BookLoop is a neighbourhood library and book exchange service written in C++17 t
 
 4. Race Condition in LibraryLedger::borrow Permits Inventory Overselling
 
-- Bug location: `src/service/library_ledger.cpp`, inside `bookloop::LibraryLedger::borrow(int count)` at line 6, invoked from `src/main.cpp` line 40.
+- Bug location: `src/service/library_ledger.cpp`, inside `bookloop::LibraryLedger::borrow(int count)` at line 6, invoked via `src/main.cpp` line 67.
 - How to observe it: Send two concurrent `POST /api/borrow` requests for book ID 7 (having only 1 copy available).
 - Failure: The availability check `current < count` occurs prior to acquiring `mutex_`, and the thread yields via `std::this_thread::sleep_for(3ms)`. Concurrent requests pass the check before either decrements stock, allowing available inventory to drop to -1.
 - Expected: Acquire `mutex_` before inspecting or modifying `available_`, ensuring that copy availability verification and decrement occur as a single atomic operation.
 
 5. Unvalidated Book Returns Generate Phantom Inventory and Exceed Physical Copy Limits
 
-- Bug location: `src/main.cpp`, inside the `POST /api/return` route handler at line 41.
+- Bug location: `src/service/return_service.cpp`, inside `bookloop::process_return(Book& book, LibraryLedger* featured_ledger)` at line 11.
 - How to observe it: Send a `POST /api/return` request for book ID 2 when all owned copies are already in stock.
-- Failure: For non-ledger books, `++b->available` executes unconditionally without checking if `b->available < b->copies` or verifying an active loan, allowing available copies to increment past owned inventory indefinitely.
-- Expected: Validate that `b->available < b->copies` and verify the return against an active checkout, rejecting unlent returns with `{"accepted": false, "message": "That return could not be matched to a loan."}`.
+- Failure: In `process_return()`, `++book.available` executes unconditionally without verifying that available copies are below total copies (`book.available < book.copies`) or checking an active checkout loan, allowing available copies to increment past owned inventory indefinitely.
+- Expected: Validate that `book.available < book.copies` and verify the return against an active checkout, returning `false` if no copy is eligible for return.
 
 6. Unsynchronized Concurrent Mutations and Data Races on Global Catalog State
 
-- Bug location: `src/main.cpp`, across global `books` vector (line 15) accessed in handlers at lines 38, 39, 40, 41, and 43.
+- Bug location: `src/service/catalog_store.cpp`, inside `bookloop::CatalogStore::borrow_copy(int id)` at lines 36–45 and across the underlying `books_` storage accessed without synchronization primitives.
 - How to observe it: Dispatch concurrent borrow and return requests while continuously polling `GET /api/state` or `GET /api/search` across multiple HTTP worker threads.
-- Failure: The multi-threaded `cpp-httplib` server executes route handlers concurrently across threads without synchronization, causing data races on `std::vector<Book> books`, leading to torn reads, corrupted strings, or lost updates.
-- Expected: Synchronize read and write operations on `books` using a synchronization primitive (such as `std::shared_mutex` or `std::mutex`) or encapsulate catalog access within a thread-safe repository service.
+- Failure: The multi-threaded server invokes handlers concurrently across threads that access and mutate `CatalogStore::books_` without mutex protection, causing data races, torn reads, and corrupted inventory states.
+- Expected: Synchronize read and write access to catalog records using synchronization primitives (such as `std::shared_mutex` or `std::mutex`) within `CatalogStore`.

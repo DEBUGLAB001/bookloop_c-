@@ -5,9 +5,11 @@
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/*.cpp")
 set(OLD_GLOB
   "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_search.cpp"
+  "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_store.cpp"
   "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/exchange_matcher.cpp"
   "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/library_ledger.cpp"
   "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/reading_stack.cpp"
+  "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/return_service.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
