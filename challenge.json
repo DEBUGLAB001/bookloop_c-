@@ -7,5 +7,13 @@
   "default_port": 8081,
   "bugs": 6,
   "dsa_bugs": 3,
-  "god_level_dsa_bugs": 2
+  "god_level_dsa_bugs": 2,
+  "bug_topics": [
+    "Trie",
+    "Min-Cost Max-Flow",
+    "0/1 Knapsack",
+    "Race Condition",
+    "Invariant Validation",
+    "Data Race"
+  ]
 }
