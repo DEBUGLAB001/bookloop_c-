@@ -223,11 +223,14 @@ int main() {
     res.set_content(response.dump(), "application/json");
   });
 
-  int port = 8081;
-  if (const char* env = std::getenv("PORT")) {
-    port = std::atoi(env);
+  // 4. Resolve port and BIND TO 0.0.0.0
+  int port = 8080;
+  const char* env_port = std::getenv("PORT");
+  if (env_port) {
+    port = std::atoi(env_port);
   }
 
-  std::cout << "BookLoop listening on 0.0.0.0:" << port << std::endl;
-  return server.listen("0.0.0.0", port) ? 0 : 1;
+  std::cout << "[Server] Listening on 0.0.0.0:" << port << std::endl;
+  server.listen("0.0.0.0", port);
+  return 0;
 }

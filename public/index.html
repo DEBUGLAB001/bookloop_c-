@@ -1,8 +1,289 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f0e8"><title>BookLoop — a library that comes around</title><link rel="stylesheet" href="/css/style.css"></head>
-<body><header class="topbar"><a class="brand" href="#home"><span class="brand-mark">b.</span><span>bookloop<small>READ · SHARE · REPEAT</small></span></a><nav><a class="active" href="#discover">Discover</a><a href="#exchange">Book exchange</a><a href="#stack">Reading stack</a></nav><button class="profile"><span>R</span> Reader</button></header>
-<main id="home"><section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> YOUR NEIGHBOURHOOD LIBRARY</p><h1>Good books<br>find their <i>way back.</i></h1><p class="hero-text">Borrow a story from someone nearby, pass one along when you're done, and let your next favourite find you.</p><a class="dark-button" href="#discover">Find your next read <span>↗</span></a><div class="community"><div class="faces"><b>M</b><b>A</b><b>S</b><b>+</b></div><span><strong>18 readers</strong><br>sharing around you</span></div></div><div class="hero-art"><div class="art-sun"></div><div class="art-label">THIS MONTH'S<br>COMMUNITY PICK</div><div class="book-cover"><span>URSULA K. LE GUIN</span><strong>THE LEFT<br>HAND OF<br>DARKNESS</strong><em>A BOOKLOOP<br>FAVOURITE · 1969</em></div><div class="art-note">Pass it on<br><strong>↗</strong></div><div class="art-flower">✳</div></div></section>
-<section class="section discover" id="discover"><div class="section-head"><div><p class="eyebrow">THE COMMUNITY SHELF</p><h2>Find something to get lost in.</h2></div><div class="search"><span>⌕</span><input id="search" placeholder="Try a title, author or topic" autocomplete="off"><kbd>↵</kbd></div></div><div class="filters" id="filters"><button class="filter selected" data-genre="All">All books <span>12</span></button><button class="filter" data-genre="Speculative fiction">Speculative</button><button class="filter" data-genre="Computing">Computing</button><button class="filter" data-genre="Literary fiction">Literary fiction</button><button class="filter" data-genre="Science fiction">Science fiction</button><span class="shelf-note">Sorted by community favourites <span>⌄</span></span></div><div class="book-grid" id="book-grid"></div></section>
-<section class="exchange-section" id="exchange"><div class="exchange-intro"><p class="eyebrow">PASS A STORY ALONG</p><h2>One good read<br>leads to <i>another.</i></h2><p>Readers on your shelf are looking for their next book too. Find a swap that works for both of you.</p><a href="#exchange-cards" class="text-link">Explore book swaps <span>↗</span></a><div class="loop-mark">↻</div></div><div class="exchange-content"><div class="exchange-top"><div><span class="section-kicker">GOOD MATCHES, NEAR YOU</span><h3>Open to a swap</h3></div><span class="match-count" id="match-count">— matches</span></div><div class="swap-list" id="exchange-cards"></div><p class="exchange-foot">Every book has another chapter. <span>Make someone's day.</span></p></div></section>
-<section class="stack-section" id="stack"><div class="stack-copy"><p class="eyebrow">A LITTLE READING PLAN</p><h2>Make room for<br>a <i>weekend stack.</i></h2><p>How many pages can you fit in? We'll pick a few shelf favourites for your reading weekend.</p><div class="budget-control"><label for="page-budget">My page budget</label><div><input id="page-budget" type="range" min="250" max="1400" step="50" value="700"><strong><span id="budget-label">700</span> <small>pages</small></strong></div></div><button class="dark-button" id="build-stack">Build my stack <span>↗</span></button></div><div class="stack-result" id="stack-result"><div class="stack-placeholder"><span>✳</span><h3>Your weekend stack<br>starts here.</h3><p>Pick a page budget and see what fits.</p></div></div></section>
-<footer><a class="brand" href="#home"><span class="brand-mark">b.</span><span>bookloop<small>READ · SHARE · REPEAT</small></span></a><span>A neighbourhood library, made by readers.</span><span class="footer-status"><i></i> Library online</span></footer></main><div class="toast" id="toast"></div><script src="/js/app.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>BookLoop — Where Local Readers Get Books Done</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Header / Topbar Navigation -->
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">b.</span>
+      <span>bookloop<small>READ · SHARE · REPEAT</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#discover">Discover</a>
+      <a href="#exchange">Book exchange</a>
+      <a href="#stack">Reading stack</a>
+    </nav>
+    <button class="profile">
+      <span>R</span>
+      Reader
+    </button>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section with Canvas Board inspired by Reference Image -->
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="pill-badge">NEIGHBOURHOOD LIBRARY</div>
+        <h1>Where Local Readers<br><span class="highlight-lead">Get Books Done</span></h1>
+        <p class="hero-subtitle">Curated Shelves, Peer Swaps, & Reading Sprints</p>
+
+        <div class="hero-actions">
+          <a class="dark-button" href="#discover">
+            <span class="cta-icon">✦</span>
+            Browse Community Shelf
+          </a>
+          <a class="sub-link" href="#exchange">Join local reader swaps & waitlists ↗</a>
+        </div>
+
+        <div class="community">
+          <div class="faces">
+            <b>M</b>
+            <b>A</b>
+            <b>S</b>
+            <b>+</b>
+          </div>
+          <span><strong>18 neighbours</strong><br>actively sharing books nearby</span>
+        </div>
+      </div>
+
+      <div class="hero-canvas-wrapper">
+        <!-- Playful illustrated character pointing towards canvas (from reference) -->
+        <svg class="character-illustration" viewBox="0 0 140 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Curly hair puff -->
+          <circle cx="58" cy="36" r="16" fill="#1E293B"/>
+          <circle cx="70" cy="40" r="14" fill="#1E293B"/>
+          <circle cx="50" cy="48" r="12" fill="#1E293B"/>
+          <!-- Head / Face -->
+          <circle cx="68" cy="52" r="12" fill="#FDA4AF"/>
+          <circle cx="72" cy="50" r="2" fill="#881337"/>
+          <path d="M72 56 Q75 59 78 56" stroke="#881337" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="64" y="62" width="6" height="8" fill="#FDA4AF"/>
+          <!-- Patterned Polka Dot Top -->
+          <path d="M52 70 C52 70 60 68 67 68 C74 68 82 70 82 70 L86 116 C86 116 76 120 67 120 C58 120 48 116 48 116 Z" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+          <!-- Dots on sweater -->
+          <circle cx="58" cy="80" r="2" fill="#10B981"/>
+          <circle cx="72" cy="78" r="2" fill="#10B981"/>
+          <circle cx="64" cy="90" r="2" fill="#10B981"/>
+          <circle cx="78" cy="94" r="2" fill="#10B981"/>
+          <circle cx="56" cy="102" r="2" fill="#10B981"/>
+          <circle cx="70" cy="106" r="2" fill="#10B981"/>
+          <!-- Pointing Arm (pointing towards canvas) -->
+          <path d="M78 74 L106 72 L124 74" stroke="#FDA4AF" stroke-width="6" stroke-linecap="round"/>
+          <!-- Left relaxed arm -->
+          <path d="M52 74 L42 98 L48 108" stroke="#FDA4AF" stroke-width="6" stroke-linecap="round"/>
+          <!-- Violet / Purple Pants -->
+          <path d="M54 118 L46 215 L58 217 L66 142 L72 217 L84 215 L78 118 Z" fill="#8B5CF6"/>
+          <!-- Shoes -->
+          <ellipse cx="48" cy="220" rx="10" ry="4" fill="#0F172A"/>
+          <ellipse cx="80" cy="220" rx="10" ry="4" fill="#0F172A"/>
+        </svg>
+
+        <!-- Canvas with Iconic Multi-Colored Border Frame -->
+        <div class="canvas-frame-outer">
+          <div class="canvas-split-container">
+            <!-- Left Workspace Document Card -->
+            <div class="canvas-doc-card">
+              <!-- Toolbar -->
+              <div class="canvas-toolbar">
+                <div class="tool-pill">
+                  <span>H1</span>
+                  <span>⌄</span>
+                </div>
+                <div class="tool-icons">
+                  <span>≡</span>
+                  <span>≡</span>
+                  <span>B</span>
+                  <span>/</span>
+                  <span>U</span>
+                  <span>S</span>
+                </div>
+                <div class="color-dots">
+                  <span class="color-dot coral"></span>
+                  <span class="color-dot yellow"></span>
+                  <span class="color-dot mint"></span>
+                  <span class="color-dot blue"></span>
+                  <span class="color-dot lavender"></span>
+                </div>
+                <div class="tool-meta">
+                  <span>😊</span>
+                  <span>🔍</span>
+                  <span>🔔</span>
+                  <span>⌄</span>
+                </div>
+              </div>
+
+              <!-- Document Body -->
+              <div class="doc-header">
+                <h3 class="doc-title">Weekly Sprint</h3>
+                <div class="doc-progress-bar">
+                  <div class="doc-progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="doc-section-heading">
+                <span>⁝⁝</span> Objectives
+              </div>
+
+              <div class="checklist-group">
+                <!-- Highlighted Active Line with Live User Tag [You] -->
+                <div class="checklist-row">
+                  <div class="check-box-icon checked">✓</div>
+                  <div class="text-bar highlight-coral-dark"></div>
+                  <!-- The Coral "You" Cursor Pill from Reference -->
+                  <div class="live-cursor-tag">You</div>
+                </div>
+
+                <div class="checklist-row">
+                  <div class="check-box-icon checked">✓</div>
+                  <div class="text-bar highlight-coral-med"></div>
+                </div>
+
+                <div class="checklist-row">
+                  <div class="check-box-icon unchecked"></div>
+                  <div class="text-bar placeholder-gray-1"></div>
+                </div>
+
+                <div class="checklist-row">
+                  <div class="check-box-icon unchecked"></div>
+                  <div class="text-bar placeholder-gray-2"></div>
+                </div>
+              </div>
+
+              <div class="doc-section-heading" style="margin-top: 18px;">
+                Deadlines
+              </div>
+
+              <div class="checklist-row">
+                <div class="check-box-icon unchecked"></div>
+                <div class="text-bar placeholder-gray-1" style="width: 140px;"></div>
+              </div>
+              <div class="deadline-tag">
+                <span>📅</span> Due Today
+              </div>
+
+              <div class="add-circle-btn">+</div>
+            </div>
+
+            <!-- Right Canvas Side Panel (Video Call / Preview Panel from Reference) -->
+            <div class="canvas-side-panel">
+              <div class="panel-preview-area">
+                <div class="panel-preview-content">
+                  <span class="preview-badge">COMMUNITY PICK</span>
+                  <h4 class="preview-title">The Left Hand of Darkness</h4>
+                  <p style="font-size: 10px; color: #64748B; margin: 4px 0 0;">Ursula K. Le Guin · 1969</p>
+                </div>
+              </div>
+
+              <!-- Green Start Reading Button -->
+              <a href="#discover" class="start-call-btn" id="canvas-action-btn">
+                <span class="cam-icon">📖</span> Start Reading
+              </a>
+
+              <div class="panel-bottom-chat" id="canvas-chat-bar">
+                <input class="chat-input-field" id="canvas-note-input" placeholder="Note to neighbours..." autocomplete="off" />
+                <button type="button" class="chat-send-btn" id="canvas-send-btn" aria-label="Send note" title="Send note">➤</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: The Community Shelf (Discover) -->
+    <section class="section discover" id="discover">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">THE COMMUNITY SHELF</p>
+          <h2>Find something to get lost in.</h2>
+        </div>
+        <div class="search">
+          <span>⌕</span>
+          <input id="search" placeholder="Try a title, author or topic" autocomplete="off">
+          <kbd>↵</kbd>
+        </div>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter selected" data-genre="All">All books <span>12</span></button>
+        <button class="filter" data-genre="Speculative fiction">Speculative</button>
+        <button class="filter" data-genre="Computing">Computing</button>
+        <button class="filter" data-genre="Literary fiction">Literary fiction</button>
+        <button class="filter" data-genre="Science fiction">Science fiction</button>
+        <span class="shelf-note">Sorted by community favourites <span>⌄</span></span>
+      </div>
+
+      <div class="book-grid" id="book-grid"></div>
+    </section>
+
+    <!-- Section 2: Peer-to-Peer Book Swaps -->
+    <section class="exchange-section" id="exchange">
+      <div class="exchange-intro">
+        <p class="eyebrow">PASS A STORY ALONG</p>
+        <h2>One good read<br>leads to another.</h2>
+        <p>Readers on your shelf are looking for their next book too. Find a swap that works for both of you.</p>
+        <a href="#exchange-cards" class="text-link">Explore book swaps <span>↗</span></a>
+      </div>
+
+      <div class="exchange-content">
+        <div class="exchange-top">
+          <div>
+            <span class="section-kicker">GOOD MATCHES, NEAR YOU</span>
+            <h3>Open to a swap</h3>
+          </div>
+          <span class="match-count" id="match-count">— matches</span>
+        </div>
+
+        <div class="swap-list" id="exchange-cards"></div>
+        <p class="exchange-foot">Every book has another chapter. <span>Make someone's day.</span></p>
+      </div>
+    </section>
+
+    <!-- Section 3: Weekend Reading Stack -->
+    <section class="stack-section" id="stack">
+      <div class="stack-copy">
+        <p class="eyebrow">A LITTLE READING PLAN</p>
+        <h2>Make room for<br>a weekend stack.</h2>
+        <p>How many pages can you fit in? We'll pick a few shelf favourites for your reading weekend.</p>
+
+        <div class="budget-control">
+          <label for="page-budget">My page budget</label>
+          <div>
+            <input id="page-budget" type="range" min="250" max="1400" step="50" value="700">
+            <strong><span id="budget-label">700</span> <small>pages</small></strong>
+          </div>
+        </div>
+
+        <button class="dark-button" id="build-stack">Build my stack <span>↗</span></button>
+      </div>
+
+      <div class="stack-result" id="stack-result">
+        <div class="stack-placeholder">
+          <span>✳</span>
+          <h3>Your weekend stack<br>starts here.</h3>
+          <p>Pick a page budget and see what fits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <a class="brand" href="#home">
+        <span class="brand-mark">b.</span>
+        <span>bookloop<small>READ · SHARE · REPEAT</small></span>
+      </a>
+      <span>A neighbourhood library, made by readers.</span>
+      <span class="footer-status"><i></i> Library online</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="./js/app.js"></script>
+</body>
+</html>

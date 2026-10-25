@@ -86,15 +86,6 @@ rule RERUN_CMAKE
 
 
 #############################################
-# Rule for re-checking globbed directories.
-
-rule VERIFY_GLOBS
-  command = C:\Users\prakh\AppData\Local\Programs\Python\Python312\Lib\site-packages\cmake\data\bin\cmake.exe -P C:\Users\prakh\Documents\Codex\2026-10-18\diwali-cpp-challenge\outputs\bookloop\build\CMakeFiles\VerifyGlobs.cmake
-  description = Re-checking globbed directories...
-  generator = 1
-
-
-#############################################
 # Rule for cleaning all built files.
 
 rule CLEAN

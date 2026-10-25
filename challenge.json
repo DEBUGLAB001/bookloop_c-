@@ -1,19 +1,17 @@
 {
-  "name": "BookLoop",
+  "challenge_id": "cpp-bookloop-challenge",
+  "title": "BookLoop - Neighbourhood Library & Book Exchange",
   "description": "A neighbourhood library and book exchange for discovering, borrowing, and passing along books.",
-  "language": "C++17",
-  "frontend": "HTML, CSS, and vanilla JavaScript",
-  "server": "cpp-httplib",
-  "default_port": 8081,
-  "bugs": 6,
-  "dsa_bugs": 3,
-  "god_level_dsa_bugs": 2,
-  "bug_topics": [
-    "Trie",
-    "Min-Cost Max-Flow",
-    "0/1 Knapsack",
-    "Race Condition",
-    "Invariant Validation",
-    "Data Race"
-  ]
+  "runtime_config": {
+    "runtime_type": "cpp-cmake",
+    "install_command": "cmake -B build -S . -DCMAKE_BUILD_TYPE=Release && cmake --build build -j2",
+    "start_command": "./start.sh",
+    "test_command": "./tests/run_tests.sh",
+    "ports": [
+      {
+        "container_port": 8080,
+        "type": "preview"
+      }
+    ]
+  }
 }

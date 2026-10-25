@@ -1,49 +1,49 @@
 [
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\catalog_search.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\catalog_search.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\catalog_search.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\catalog_search.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_search.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/catalog_search.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\catalog_store.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\catalog_store.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\catalog_store.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\catalog_store.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_store.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/catalog_store.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\exchange_matcher.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\exchange_matcher.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\exchange_matcher.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\exchange_matcher.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/exchange_matcher.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/exchange_matcher.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\library_ledger.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\library_ledger.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\library_ledger.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\library_ledger.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/library_ledger.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/library_ledger.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\reading_stack.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\reading_stack.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\reading_stack.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\reading_stack.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/reading_stack.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/reading_stack.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\return_service.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\return_service.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\core_services.dir\\src\\service\\return_service.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\service\\return_service.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/return_service.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/core_services.dir/src/service/return_service.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\server.dir\\src\\main.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\main.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\server.dir\\src\\main.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\src\\main.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/main.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/server.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build",
-  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\challenge_tests.dir\\tests\\test_suite.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\tests\\test_suite.cpp",
+  "command": "C:\\Users\\prakh\\AppData\\Local\\Microsoft\\WinGet\\Packages\\MartinStorsjo.LLVM-MinGW.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\llvm-mingw-20260616-ucrt-x86_64\\bin\\clang++.exe -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include -O2 -DNDEBUG -std=gnu++17 -o CMakeFiles\\challenge_tests.dir\\tests\\test_suite.cpp.obj -c C:\\Users\\prakh\\Documents\\Codex\\2026-10-18\\diwali-cpp-challenge\\outputs\\bookloop\\tests\\test_suite.cpp",
   "file": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/tests/test_suite.cpp",
   "output": "C:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/challenge_tests.dir/tests/test_suite.cpp.obj"
 }

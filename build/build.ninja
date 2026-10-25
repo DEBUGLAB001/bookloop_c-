@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.8
+ninja_required_version = 1.5
 
 
 #############################################
@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_core_services: phony || .
 build CMakeFiles/core_services.dir/src/service/catalog_search.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_search.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\catalog_search.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -61,7 +61,7 @@ build CMakeFiles/core_services.dir/src/service/catalog_search.cpp.obj: CXX_COMPI
 build CMakeFiles/core_services.dir/src/service/catalog_store.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/catalog_store.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\catalog_store.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -70,7 +70,7 @@ build CMakeFiles/core_services.dir/src/service/catalog_store.cpp.obj: CXX_COMPIL
 build CMakeFiles/core_services.dir/src/service/exchange_matcher.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/exchange_matcher.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\exchange_matcher.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -79,7 +79,7 @@ build CMakeFiles/core_services.dir/src/service/exchange_matcher.cpp.obj: CXX_COM
 build CMakeFiles/core_services.dir/src/service/library_ledger.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/library_ledger.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\library_ledger.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -88,7 +88,7 @@ build CMakeFiles/core_services.dir/src/service/library_ledger.cpp.obj: CXX_COMPI
 build CMakeFiles/core_services.dir/src/service/reading_stack.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/reading_stack.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\reading_stack.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -97,7 +97,7 @@ build CMakeFiles/core_services.dir/src/service/reading_stack.cpp.obj: CXX_COMPIL
 build CMakeFiles/core_services.dir/src/service/return_service.cpp.obj: CXX_COMPILER__core_services_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/service/return_service.cpp || cmake_object_order_depends_target_core_services
   CONFIG = Release
   DEP_FILE = CMakeFiles\core_services.dir\src\service\return_service.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\core_services.dir
   OBJECT_FILE_DIR = CMakeFiles\core_services.dir\src\service
@@ -113,7 +113,7 @@ build CMakeFiles/core_services.dir/src/service/return_service.cpp.obj: CXX_COMPI
 
 build libcore_services.a: CXX_STATIC_LIBRARY_LINKER__core_services_Release CMakeFiles/core_services.dir/src/service/catalog_search.cpp.obj CMakeFiles/core_services.dir/src/service/catalog_store.cpp.obj CMakeFiles/core_services.dir/src/service/exchange_matcher.cpp.obj CMakeFiles/core_services.dir/src/service/library_ledger.cpp.obj CMakeFiles/core_services.dir/src/service/reading_stack.cpp.obj CMakeFiles/core_services.dir/src/service/return_service.cpp.obj
   CONFIG = Release
-  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
+  LANGUAGE_COMPILE_FLAGS = -O2 -DNDEBUG
   OBJECT_DIR = CMakeFiles\core_services.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -133,7 +133,7 @@ build cmake_object_order_depends_target_server: phony || cmake_object_order_depe
 build CMakeFiles/server.dir/src/main.cpp.obj: CXX_COMPILER__server_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/src/main.cpp || cmake_object_order_depends_target_server
   CONFIG = Release
   DEP_FILE = CMakeFiles\server.dir\src\main.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\server.dir
   OBJECT_FILE_DIR = CMakeFiles\server.dir\src
@@ -149,7 +149,7 @@ build CMakeFiles/server.dir/src/main.cpp.obj: CXX_COMPILER__server_unscanned_Rel
 
 build server.exe: CXX_EXECUTABLE_LINKER__server_Release CMakeFiles/server.dir/src/main.cpp.obj | libcore_services.a || libcore_services.a
   CONFIG = Release
-  FLAGS = -O3 -DNDEBUG
+  FLAGS = -O2 -DNDEBUG
   LINK_LIBRARIES = libcore_services.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\server.dir
   POST_BUILD = cd .
@@ -171,7 +171,7 @@ build cmake_object_order_depends_target_challenge_tests: phony || cmake_object_o
 build CMakeFiles/challenge_tests.dir/tests/test_suite.cpp.obj: CXX_COMPILER__challenge_tests_unscanned_Release C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/tests/test_suite.cpp || cmake_object_order_depends_target_challenge_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\challenge_tests.dir\tests\test_suite.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  FLAGS = -O2 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/include
   OBJECT_DIR = CMakeFiles\challenge_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\challenge_tests.dir\tests
@@ -187,8 +187,8 @@ build CMakeFiles/challenge_tests.dir/tests/test_suite.cpp.obj: CXX_COMPILER__cha
 
 build challenge_tests.exe: CXX_EXECUTABLE_LINKER__challenge_tests_Release CMakeFiles/challenge_tests.dir/tests/test_suite.cpp.obj | libcore_services.a || libcore_services.a
   CONFIG = Release
-  FLAGS = -O3 -DNDEBUG
-  LINK_LIBRARIES = libcore_services.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  FLAGS = -O2 -DNDEBUG
+  LINK_LIBRARIES = libcore_services.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\challenge_tests.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -245,30 +245,16 @@ build all: phony libcore_services.a server.exe challenge_tests.exe
 
 
 #############################################
-# Phony target to force glob verification run.
-
-build C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/VerifyGlobs.cmake_force: phony
-
-
-#############################################
-# Re-run CMake to check if globbed directories changed.
-
-build C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/VerifyGlobs.cmake_force
-  pool = console
-  restat = 1
-
-
-#############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/cmake_install.cmake: RERUN_CMAKE C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/cmake.verify_globs | C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/VerifyGlobs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.3/CMakeCXXCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake
+build build.ninja C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/cmake_install.cmake: RERUN_CMAKE | C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.3/CMakeCXXCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/build/CMakeFiles/VerifyGlobs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.3/CMakeCXXCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake: phony
+build C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeRCInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Linker/LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Linker/Windows-LLD.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang-CXX.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Clang.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-GNU.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows-windres.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/Windows.cmake C$:/Users/prakh/AppData/Local/Programs/Python/Python312/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake C$:/Users/prakh/Documents/Codex/2026-10-18/diwali-cpp-challenge/outputs/bookloop/CMakeLists.txt CMakeCache.txt CMakeFiles/4.4.3/CMakeCXXCompiler.cmake CMakeFiles/4.4.3/CMakeRCCompiler.cmake CMakeFiles/4.4.3/CMakeSystem.cmake: phony
 
 
 #############################################
