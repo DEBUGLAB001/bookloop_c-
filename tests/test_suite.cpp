@@ -36,7 +36,7 @@ int main() {
        ""},
   };
 
-  // --- BUG 1: Trie Fuzzy Title Search ---
+  // Test 1: Fuzzy Title Search
   test_cases.push_back({"test_fuzzy_title_search", [&]() {
     auto search = search_books(books, "left hand darkness");
     if (search.empty()) {
@@ -44,7 +44,7 @@ int main() {
     }
   }});
 
-  // --- BUG 2: Optimal Exchange Matching (Zero-potential Dijkstra defect) ---
+  // Test 2: Exchange Matching
   test_cases.push_back({"test_exchange_matching_optimal_reputation", [&]() {
     std::vector<SwapOffer> offers{
         {"A", 1, 3, 5},
@@ -56,15 +56,13 @@ int main() {
     for (const auto& m : matches) {
       total_score += m.score;
     }
-    // With zero-potential initialization on negative edges, Dijkstra settles nodes prematurely
-    // and fails to preserve feasible dual potentials for optimal cycle matching.
     if (total_score < 30 || matches.size() < 3) {
       throw std::runtime_error("Exchange matcher yielded suboptimal total score " +
                                std::to_string(total_score) + ", expected optimal reputation score >= 30");
     }
   }});
 
-  // --- BUG 3: 0/1 Knapsack Optimal Reading Stack ---
+  // Test 3: Reading Stack Selection
   test_cases.push_back({"test_reading_stack_optimal_rating", [&]() {
     std::vector<Book> stack_books{
         {1, "Book A", "Author A", "Genre", "Good", "Owner", 2020, 45, 300, 1, 1, ""},
@@ -87,7 +85,7 @@ int main() {
     }
   }});
 
-  // --- BUG 4: LibraryLedger Concurrency & Race Condition ---
+  // Test 4: Library Ledger Operations
   test_cases.push_back({"test_library_ledger_concurrency", [&]() {
     LibraryLedger ledger(1);
     std::atomic<int> success_count{0};
@@ -110,10 +108,9 @@ int main() {
     }
   }});
 
-  // --- BUG 5: Book Returns Exceed Available Copy Limits ---
+  // Test 5: Book Return Processing
   test_cases.push_back({"test_book_return_validation", [&]() {
     Book book{2, "Kindred", "Octavia Butler", "Science fiction", "Good", "Sam", 1979, 48, 287, 2, 2, ""};
-    // Book has available == copies (all copies in library). Return must be rejected.
     bool accepted = process_return(book, nullptr);
     if (accepted || book.available > book.copies) {
       throw std::runtime_error("Unvalidated return accepted: available copies incremented to " +
@@ -122,7 +119,7 @@ int main() {
     }
   }});
 
-  // --- BUG 6: CatalogStore Thread-Safe State Mutations ---
+  // Test 6: Catalog Store Concurrency
   test_cases.push_back({"test_catalog_store_thread_safety", [&]() {
     CatalogStore store;
     Book* b = store.find_book(7);
@@ -164,7 +161,6 @@ int main() {
                                std::to_string(success_count.load()) + " checkouts for 1 copy");
     }
 
-    // CatalogStore::books_ has no mutex protection across concurrent HTTP worker threads
     throw std::runtime_error("CatalogStore lacks synchronization primitives: concurrent access across worker threads causes data races");
   }});
 
